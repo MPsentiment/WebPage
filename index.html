@@ -37,29 +37,31 @@ body {
 }
 
 .authors {
-    display: flex;
-    justify-content: space-evenly; /* equal space around each author */
-    flex-wrap: nowrap;             /* stay on one line */
-    text-align: center;
+    text-align: center;           /* center everything */
     margin-top: 20px;
     margin-bottom: 20px;
-    gap: 50px; 
 }
 
 .author {
-    white-space: nowrap;
-    width: 300px;                  /* fixed width for symmetry */
+    margin-bottom: 40px;          /* space between authors */
+}
+
+.author strong {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 4px;           /* small gap to affiliation */
 }
 
 .affiliation {
+    display: block;
     font-style: italic;
-    color: #2F4F4F;
     font-size: 18px;
+    margin-bottom: 4px;           /* small gap to email */
 }
 
 .email {
-    color: #888;
     font-size: 15px;
+    color: #888;
     text-decoration: none;
 }
 
