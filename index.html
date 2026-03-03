@@ -15,7 +15,7 @@ body {
 }
 
 /* HERO SECTION */
-/* background-color: #eef2f7; */
+/* background-color: #B0E0E6; */
 .hero {
     background: linear-gradient(to right, #f4f8fc, #e9f1f9); /* optional gradient */
     padding: 40px 20px 100px 20px; /* top 40px, bottom 100px */
@@ -23,22 +23,30 @@ body {
 }
 
 .hero h1 {
+    color: #2F4F4F
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
-    margin-top: 0;     /* remove extra space above */
+    margin-top: 10px;     /* space above title */
     margin-bottom: 40px; /* space after title */
 }
 
 .authors {
-    font-size: 18px;
+    display: flex;               /* side by side */
+    justify-content: center;     /* center the group */
+    gap: 100px;                  /* space between authors */
+    flex-wrap: wrap;             /* stack on mobile if screen is narrow */
     margin-bottom: 30px;
-    color: #444;
+}
+
+.author {
+    text-align: center;          /* center text inside each author */
+    max-width: 300px;            /* optional, keeps layout neat */
 }
 
 .affiliation {
     font-style: italic;
-    color: #555; /* slightly darker gray, readable */
+    color: #2F4F4F
 }
 
 .email {
@@ -57,8 +65,8 @@ body {
 
 .button {
     display: inline-block;
-    padding: 18px 38px;   /* Bigger */
-    margin: 4px;          /* Closer together */
+    padding: 18px 28px;   /* Bigger */
+    margin: 2px;          /* Closer together */
     font-size: 18px;
     font-weight: 600;
     text-decoration: none;
@@ -67,13 +75,13 @@ body {
 }
 
 .paper-btn {
-    background-color: #1f4e79;   /* academic blue */
+    background-color: #1e90ff;
     color: white;
 }
 
 /* GITHUB BUTTON */
 .github-btn {
-    background-color: #24292e;   /* GitHub gray */
+    background-color: #808080;   /* GitHub gray */
     color: white;
 }
 
