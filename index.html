@@ -38,16 +38,16 @@ body {
 
 .authors {
     display: flex;
-    justify-content: space-evenly; /* equal space around each author */
-    flex-wrap: nowrap;             /* stay on one line */
+    justify-content: center; /* center the authors as a group */
+    flex-wrap: nowrap;       /* no wrapping */
+    gap: 50px;               /* smaller space between authors */
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 100%;                   /* stretch full width */
 }
 
 .author {
-    width: 300px;                  /* fixed width for symmetry */
+    white-space: nowrap;     /* prevent text inside author from breaking */
 }
 
 .affiliation {
