@@ -37,26 +37,31 @@ body {
 }
 
 .authors {
-    text-align: center;           /* center everything */
+    text-align: center;           /* center all authors */
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .author {
-    margin-bottom: 40px;          /* space between authors */
+    margin-bottom: 30px;          /* vertical space between the two authors */
+    line-height: 1.2;             /* compact line spacing inside each author */
+}
+
+.author strong,
+.author .affiliation,
+.author .email {
+    display: block;               /* each on its own line */
+    margin: 0;                    /* remove extra space between them */
 }
 
 .author strong {
-    display: block;
     font-size: 22px;
-    margin-bottom: 1px;           /* small gap to affiliation */
 }
 
 .affiliation {
-    display: block;
     font-style: italic;
     font-size: 18px;
-    margin-bottom: 1px;           /* small gap to email */
+    color: #2F4F4F;
 }
 
 .email {
