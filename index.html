@@ -70,35 +70,29 @@ body {
     z-index: 1;
 }
 
-.authors {
-    display: flex;
-    justify-content: center; /* center the authors as a group */
-    flex-wrap: nowrap;       /* no wrapping */
-    gap: 100px;               /* smaller space between authors */
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* AUTHOR NAMES AND CV LINKS */
+.authors .author strong,
+.authors .author strong a {
+    font-size: 20px;        /* same size for names and links */
+    color: #222;            /* black color */
+    text-decoration: none;  /* remove underline */
 }
 
-.authors .author a {
-    font-size: 20px;
-    color: #222;           /* black text */
-    text-decoration: none; /* remove underline */
+.authors .author strong a:hover {
+    text-decoration: underline; /* underline only on hover */
 }
 
-.authors .author a:hover {
-    text-decoration: underline; /* underline on hover */
-}
-
+/* AFFILIATION */
 .affiliation {
     font-style: italic;
     color: #2F4F4F;
     font-size: 18px;
 }
 
+/* EMAIL LINKS */
 .email {
-    color: #8C8C91;
-    font-size: 15px;
+    color: #8C8C91;         /* grey */
+    font-size: 15px;        /* smaller than name */
     text-decoration: none;
 }
 
