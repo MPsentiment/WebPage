@@ -252,9 +252,9 @@ figcaption {
 <h2>Methodology</h2>
 
     <p class="text">
-    We construct a textual tone index that quantifies the degree of hawkishness or dovishness in ECB monetary policy communication. 
+    We construct a textual tone index that quantifies the <em></em>degree of hawkishness or dovishness in ECB monetary policy communication</em>. 
     The methodology relies on a structured NLP pipeline applied to the full transcripts of ECB press conferences held after policy rate announcements between 2000 and 2025. 
-    The NLP pipeline combines rule-based preprocessing and Transformer-based classification models to extract sentence-level information and aggregate it into a document-level tone score.
+    The NLP pipeline combines rule-based pre-processing and Transformer-based classification models to extract sentence-level information and aggregate it into a document-level tone score.
     </p>
 
     <p class="text">
@@ -267,7 +267,7 @@ figcaption {
 
     <h3>Step 1: First-Pass Relevance Filtering</h3>
     <p class="text">
-    The first step consists of a preprocessing stage aimed at removing economically irrelevant sentences from the raw press conference transcripts, such as greetings, procedural statements, and journalists' questions. 
+    The first step consists of a pre-processing stage aimed at removing economically irrelevant sentences from the raw press conference transcripts, such as greetings, procedural statements, and journalists' questions. 
     </p>
 
     <h3>Step 2: Relevance Classification Model</h3>
@@ -279,7 +279,7 @@ figcaption {
     <h3>Step 3: Sentiment Classification Model</h3>
     <p class="text">
     In the third step, the sentences classified as relevant are processed by a sentiment classification model. 
-    The model assigns each sentence one of five ordered sentiment labels representing the tone of the communication: strongly dovish, dovish, neutral, hawkish, and strongly hawkish.
+    The model assigns each sentence one of five ordered sentiment labels representing the tone of the communication: <em></em>strongly dovish, dovish, neutral, hawkish, and strongly hawkish</em>.
     </p>
 
     <h3>Step 4: Textual Tone Score Index Computation</h3>
