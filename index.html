@@ -74,32 +74,32 @@ body {
 /* AUTHORS CONTAINER: two authors side by side */
 .authors {
     display: flex;
-    justify-content: center; /* center the group */
-    flex-wrap: nowrap;       /* no wrapping */
-    gap: 80px;               /* space between authors */
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 50px;               /* smaller gap between authors */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/* EACH AUTHOR: stack name, affiliation, email closely */
+/* EACH AUTHOR: stack name, affiliation, email tightly */
 .author {
     display: flex;
-    flex-direction: column; /* vertical stack */
-    align-items: center;    /* center content */
-    gap: 0px;               /* small spacing between lines */
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;               /* very small space between lines */
+    margin: 0;              /* remove default margins */
 }
 
 /* NAME / CV LINKS */
 .authors .author strong,
 .authors .author strong a {
-    font-size: 20px;        /* same size for names and links */
-    color: #222;            /* black text */
-    text-decoration: none;  /* remove underline */
+    font-size: 20px;
+    color: #222;
+    text-decoration: none;
 }
 
 .authors .author strong a:hover {
-    text-decoration: underline; /* underline only on hover */
+    text-decoration: underline;
 }
 
 /* AFFILIATION */
@@ -111,8 +111,8 @@ body {
 
 /* EMAIL */
 .email {
-    color: #8C8C91;         /* grey */
-    font-size: 15px;        /* smaller than name */
+    color: #8C8C91;
+    font-size: 15px;
     text-decoration: none;
 }
 
