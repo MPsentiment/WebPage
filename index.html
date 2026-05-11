@@ -247,16 +247,17 @@ figcaption {
     <h2>Abstract</h2>
 
     <p class="abstract">
-        We develop and validate an NLP pipeline to compute the textual tone score index of monetary policy communication, quantifying the degree of hawkishness or dovishness. The pipeline leverages a RoBERTa-large Transformer model, and it is trained and evaluated on a sample of ECB press conferences following the policy rate announcement from 2000 to 2025. We provide a twofold validation of the resulting index. First, from a macroeconomic perspective, the tone index captures the underlying economic stance, mitigating omitted-variable bias in the estimated relationship between policy rates and inflation. Second, from a macro-financial perspective, we isolate the surprise component of press conference communication and show that interest rates increase in response to hawkish communication surprises.
+        We develop a NLP pipeline to compute the \emph{textual tone score index} of ECB monetary policy communication, quantifying the degree of hawkishness or dovishness. 
+        The pipeline leverages the RoBERTa Transformer model, and it is trained and evaluated on a sample of ECB press conferences following the policy rate announcement from 2000 to 2025. 
+        We show that the index allows to recover the correct theoretical effect of monetary policy on inflation, thus proving that the index meaningfully summarizes the central banks' evaluation of the underlying economic environment.
     </p>
 
     <figure class="figure">
-        <img src="assets/Score_HICP_RL.png" alt="ECB Textual Tone Score Index" class="paper-image">
+        <img src="assets/SentimentIndex.png" alt="ECB Textual Tone Score Index" class="paper-image">
         <figcaption>
             Textual tone score and composite HICP inflation gap. The orange line represents the
-            exponentially weighted moving average of the tone score with a half-life of 90 days, while the orange
-            dots denote the raw tone scores computed for individual press conferences. The blue line shows the
-            composite inflation gap relative to the 2% target.
+            exponentially weighted moving average of the tone score with a half-life of 60 days, while the orange
+            dots denote the raw tone scores computed for individual press conferences.
         </figcaption>
     </figure>
     
@@ -307,9 +308,7 @@ figcaption {
     \sum_{j=1}^{N_i}
     w_{j}^{\mathrm{rel}}
     \cdot
-    \mathrm{sign}(\hat{y}_{j})
-    \cdot
-    \hat{y}_{j}^{2}
+    \hat{y}_{j}
     \]
     </p>
     
@@ -319,16 +318,15 @@ figcaption {
 
     <p class="text">
         The resulting index summarizes the overall tone of the communication and produces a time series tracking the evolution of ECB monetary policy stance over time.
+        Exploiting a keyword dictionary, the tone score index is computed at a topic-specific level, focusing on four main dimensions:
+        monetary policy, inflation, economic growth, and financial conditions.
     </p>
 
     <figure class="figure">
-        <img src="assets/score_computation.png" alt="Score computation" class="paper-image">
+        <img src="assets/SentimentIndex_bytopic.png" alt="Score computation" class="paper-image">
         <figcaption>
-            Overview of the textual tone score computation using the NLP pipeline. The figure
-            presents an example based on the ECB press conference of July 27, 2023, resulting in a textual
-            tone score of 1.39. Sentences shown in grey are classified as irrelevant to monetary policy and are
-            therefore excluded from the computation, whereas sentences highlighted in red exhibit a strongly
-            hawkish tone and contribute positively to the index.
+            Textual tone scores associated with different topic categories. 
+            The black line represents the overall textual tone index, while the blue, orange, green, and red lines repor the tone scores associated with financial, monetary policy, growth, and inflation-related content, respectively.
         </figcaption>
     </figure>
     
